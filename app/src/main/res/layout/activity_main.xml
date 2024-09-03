@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_PT_XYZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PT_Name"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp" />
+
+    <ImageView
+        android:id="@+id/icon_location"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_location"
+        android:layout_below="@+id/tv_PT_XYZ"
+        android:layout_alignStart="@+id/tv_PT_XYZ"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/icon_location"
+        android:layout_alignTop="@+id/icon_location"
+        android:layout_marginStart="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon_location"
+        android:background="@drawable/bg_stroke_information"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/informasi_perubahan"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/last_update_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_info"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_last_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_terakhir"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tv_last_update_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waktu_pembaruan_terakhir"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_toEndOf="@+id/tv_last_update"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/next_update_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/last_update_layout"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_next_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_selanjutnya"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_next_update_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_pembaruan_selanjutnya"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_toEndOf="@+id/tv_next_update"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Four card -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_layout"
+        android:layout_marginTop="24dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_catalog"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_card"
+            android:layout_alignParentStart="true"
+            android:elevation="8dp"
+            android:layout_margin="24dp" >
+
+            <ImageView
+                android:id="@+id/icon_catalog"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_catalog"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/katalog_tender"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_below="@+id/icon_catalog" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_saved"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_card"
+            android:layout_alignParentEnd="true"
+            android:elevation="8dp"
+            android:layout_margin="24dp" >
+
+            <ImageView
+                android:id="@+id/icon_saved"
+                android:layout_width="56dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_saved"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tender_tersimpan"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_below="@+id/icon_saved" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_statistik"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_card"
+            android:layout_below="@+id/layout_catalog"
+            android:layout_alignParentStart="true"
+            android:elevation="8dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp" >
+
+            <ImageView
+                android:id="@+id/icon_statistik"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_chart"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/laporan_statistik"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_below="@+id/icon_statistik" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_setting"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_card"
+            android:layout_below="@+id/layout_saved"
+            android:layout_alignParentEnd="true"
+            android:elevation="8dp"
+            android:layout_marginHorizontal="24dp" >
+
+            <ImageView
+                android:id="@+id/icon_setting"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_settings"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pengaturan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_below="@+id/icon_setting" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
